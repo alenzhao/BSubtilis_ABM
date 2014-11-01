@@ -1,4 +1,10 @@
 .DS_Store
+Repast.settings
+velocity.log
+velocity.log.*
+terracotta/*
+images/*
+movies/*
 *.class
 
 # Mobile Tools for Java (J2ME)
