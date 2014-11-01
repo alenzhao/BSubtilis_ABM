@@ -35,27 +35,27 @@ scheduler if initiated from a rule in the same system tick.
 <br><br>
 Agent classes:  Agent class files contain the rules that are executed for that particular agent.
 <br><br>
-ExtendAgent.java:  all agents extend this class, generic methods are provided by this class
-ClpCClpP.java
-ComK.java
-ComS.java
-ComX.java
-DegU.java
-MecA.java
-MRNA.java
-Promoter.java
-Repressor.java
-Ribosome.java
-<br><br>
+ExtendAgent.java:  all agents extend this class, generic methods are provided by this class<br>
+ClpCClpP.java<br>
+ComK.java<br>
+ComS.java<br>
+ComX.java<br>
+DegU.java<br>
+MecA.java<br>
+MRNA.java<br>
+Promoter.java<br>
+Repressor.java<br>
+Ribosome.java<br>
+<br>
 Agent support classes:
 <br><br>
-Available.java: general class for finding neighbors and moving to neighboring positions.
-BsubtilisParameters.java: All probabilities are defined in here.
+Available.java: general class for finding neighbors and moving to neighboring positions.<br>
+BsubtilisParameters.java: All probabilities are defined in here.<br>
 <br><br>
 
 General classes to aid Repast Framework:
 <br><br>
-AgentStyle2D.java:  For display of 2-d agents, colors are specified here.
-AgentStyle3D.java:  For display of 3-d agents, colors are specified here.
+AgentStyle2D.java:  For display of 2-d agents, colors are specified here.<br>
+AgentStyle3D.java:  For display of 3-d agents, colors are specified here.<br>
 MyDiffuser.java: Found a bug in the diffusion implementation in Repast and fixed it here.  It's only 
-with 3-D diffusion that there was a problem.
+with 3-D diffusion that there was a problem.<br>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sweep runs="1">
+  <parameter constant_type="number" name="inXSize" type="constant" value="40"/>
+  <parameter constant_type="number" name="inYSize" type="constant" value="40"/>
+  <parameter constant_type="number" name="inZSize" step="" type="constant" value="40"/>
+  <parameter constant_type="number" name="exXSize" step="" type="constant" value="40"/>
+  <parameter constant_type="number" name="exYSize" type="constant" value="40"/>
+  <parameter constant_type="number" name="exZSize" type="constant" value="10"/>
+  <parameter constant_type="number" name="numberofComK" type="constant" value="12"/>
+  <parameter constant_type="number" name="numberofComS" type="constant" value="12"/>
+  <parameter constant_type="number" name="numberofComX" type="constant" value="12"/>
+  <parameter constant_type="number" name="numberofDegU" type="constant" value="12"/>
+  <parameter constant_type="number" name="numberofMecA" type="constant" value="20"/>
+  <parameter constant_type="number" name="numberofRepressors" type="constant" value="12"/>
+  <parameter constant_type="number" name="numberofRibosomes" type="constant" value="80"/>
+  <parameter constant_type="number" name="numberofClpCClpP" type="constant" value="20"/>
+  <parameter constant_type="number" name="numberofmRNA" type="constant" value="0"/>
+  <parameter constant_type="number" name="initialMass" type="constant" value="5f"/>
+  <parameter constant_type="number" name="growthRate" type="constant" value="0.0058f"/>
+  <parameter constant_type="number" name="deathRate" type="constant" value="0.002f"/>
+  <parameter constant_type="number" name="carryingCapacity" type="constant" value="16f"/>
+  <parameter constant_type="number" name="threshold" type="constant" value="15f"/>
+  <parameter constant_type="number" name="comKThreshold" type="constant" value="20"/>
+  <parameter constant_type="number" name="nutrientConcentration" type="constant" value="400"/>
+  <parameter constant_type="number" name="numberofCells" type="constant" value="20"/>
+  <parameter constant_type="boolean" name="disablecellmodel" type="constant" value="false"/>
+  <parameter constant_type="boolean" name="visibleFood" type="constant" value="false"/>
+  <parameter constant_type="string" name="familyTreePath" type="constant" value="/Users/svasa/repast2/BSubtilis/logs"/>
+</sweep>

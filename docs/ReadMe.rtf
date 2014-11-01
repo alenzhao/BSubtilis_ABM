@@ -1,0 +1,72 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf110
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww13720\viewh9940\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 This is a multi-scale agent-based model built with Repast Simphony v 1.2 modeling the\
+gene regulatory network that is responsible for the expression of the competence\
+phenotype in the soil bacteria Bacillus subtilis. The model only displays the agents defined\
+by ExtraCellEnviro.  It is not possible to view the internal workings of each ABM created by \
+the BistableSwitch class without modifying the code and how it is displayed.\
+\
+The project structure was developed using Eclipse IDE.  The Repast Simphony 1.2 plugin \
+is required to successfully build the project.\
+\
+
+\b \ul Context Builder files\ulnone :
+\b0 \
+\
+\ul BSubtilisColony.java\ulnone : creates the ExtraCellEnviro context\
+\
+\ul ExtraCellEnviro.java\ulnone : Builds the top layer of the ABM consisting of cell agents with the class \
+BistableSwitch.  This models the extracellular environment where cell agents interact with \
+eachother--starvation and cell density conditions are simulated at this level.  Two value layers \
+are managed here, nutrients and ComX. Agent rules are scheduled on odd system ticks.  \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 Maintenance rules like adding or removing agents are scheduled for even system ticks so that\
+rules can be removed from the scheduler--Repast doesn't allow rules to be removed from the \
+scheduler if initiated from a rule in the same system tick.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 \ul \ulc0 BistableSwitch.java:\ulnone  This class also builds an ABM and represents the Bacillus subtilis cell but \
+acts as an agent to ExtraCellEnviro class.  The intracellular model is fully built by this class by \
+creating all agents and scheduling the rules.  Agent rules are scheduled on odd system ticks.  \
+Maintenance rules like adding or removing agents are scheduled for even system ticks so that\
+rules can be removed from the scheduler--Repast doesn't allow rules to be removed from the \
+scheduler if initiated from a rule in the same system tick.\
+\
+
+\b \ul Agent classes:\ulnone   
+\b0 Agent class files contain the rules that are executed for that particular agent.
+\b \
+
+\b0 \
+\ul ExtendAgent.java\ulnone :  all agents extend this class, generic methods are provided by this class\
+\ul ClpCClpP.java\ulnone \
+\ul ComK.java\ulnone \
+\ul ComS.java\ulnone \
+\ul ComX.java\ulnone \
+\ul DegU.java\ulnone \
+\ul MecA.java\
+MRNA.java\ulnone \
+\ul Promoter.java\ulnone \
+\ul Repressor.java\ulnone \
+\ul Ribosome.java\
+\ulnone \
+
+\b \ul Agent support classes:
+\b0 \ulnone \
+\
+\ul Available.java\ulnone : general class for finding neighbors and moving to neighboring positions.\
+\ul BsubtilisParameters.java\ulnone : All probabilities are defined in here.\
+\
+\
+
+\b \ul General classes to aid Repast Framework:
+\b0 \
+\
+AgentStyle2D.java\ulnone :  For display of 2-d agents, colors are specified here.\
+\ul AgentStyle3D.java\ulnone :  For display of 3-d agents, colors are specified here.\
+\ul MyDiffuser.java\ulnone : Found a bug in the diffusion implementation in Repast and fixed it here.  It's only \
+with 3-D diffusion that there was a problem.}

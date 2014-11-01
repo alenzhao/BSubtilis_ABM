@@ -1,0 +1,3 @@
+This is a multi-scale agent-based model built with Repast Simphony v 1.2 modeling the
+gene regulatory network that is responsible for the expression of the competence
+phenotype in the soil bacteria Bacillus subtilis. 

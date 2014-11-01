@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<score:SContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:score="http://scoreabm.org/score" label="BSubtilis" ID="bSubtilis" pluralLabel="BSubtiliss">
+  <attributes label="In X Size" ID="inXSize" pluralLabel="In X Sizes" sType="INTEGER" defaultValue="40"/>
+  <attributes label="In Y Size" ID="inYSize" pluralLabel="In Y Sizes" sType="INTEGER" defaultValue="40"/>
+  <attributes label="In Z Size" ID="inZSize" pluralLabel="In Z Sizes" sType="INTEGER" defaultValue="40"/>
+  <attributes label="number of ComK" ID="numberofComK" pluralLabel="number of ComKs" sType="INTEGER" defaultValue="12"/>
+  <attributes label="number of ComS" ID="numberofComS" pluralLabel="number of ComSs" sType="INTEGER" defaultValue="12"/>
+  <attributes label="number of ComX" ID="numberofComX" pluralLabel="number of ComXs" sType="INTEGER" defaultValue="12"/>
+  <attributes label="number of DegU" ID="numberofDegU" pluralLabel="number of DegUs" sType="INTEGER" defaultValue="12"/>
+  <attributes label="number of MecA" ID="numberofMecA" pluralLabel="number of MecAs" sType="INTEGER" defaultValue="20"/>
+  <attributes label="number of Repressors" ID="numberofRepressors" pluralLabel="number of Repressorss" sType="INTEGER" defaultValue="12"/>
+  <attributes label="number of Ribosomes" ID="numberofRibosomes" pluralLabel="number of Ribosomess" sType="INTEGER" defaultValue="80"/>
+  <attributes label="number of ClpC ClpP" ID="numberofClpCClpP" pluralLabel="number of ClpC ClpPs" sType="INTEGER" defaultValue="20"/>
+  <attributes label="number of mRNA" ID="numberofmRNA" pluralLabel="number of mRNAs" sType="INTEGER" defaultValue="0"/>
+  <attributes label="Ex X Size" ID="exXSize" pluralLabel="Ex X Sizes" sType="INTEGER" defaultValue="40"/>
+  <attributes label="Ex Y Size" ID="exYSize" pluralLabel="Ex Y Sizes" sType="INTEGER" defaultValue="40"/>
+  <attributes label="Ex Z Size" ID="exZSize" pluralLabel="Ex Z Sizes" sType="INTEGER" defaultValue="10"/>
+  <attributes label="Initial Mass" ID="initialMass" pluralLabel="Initial Mass" sType="FLOAT" defaultValue="5"/>
+  <attributes label="Growth Rate" ID="growthRate" pluralLabel="Growth Rates" sType="FLOAT" defaultValue="0.0058"/>
+  <attributes label="Carrying Capacity" ID="carryingCapacity" pluralLabel="Carrying Capacitys" sType="FLOAT" defaultValue="16"/>
+  <attributes label="Threshold" ID="threshold" pluralLabel="Thresholds" sType="FLOAT" defaultValue="15"/>
+  <attributes label="ComK Threshold" ID="comKThreshold" pluralLabel="ComK Thresholds" sType="INTEGER" defaultValue="20"/>
+  <attributes label="Nutrient Concentration" ID="nutrientConcentration" pluralLabel="Nutrient Concentrations" sType="INTEGER" defaultValue="400"/>
+  <attributes label="Number of Cells" ID="numberofCells" pluralLabel="Number of Cellss" sType="INTEGER" defaultValue="20"/>
+  <attributes label="disablecellmodel" ID="disablecellmodel" pluralLabel="disablecellmodels" defaultValue="false"/>
+  <attributes label="FamilyTreePath" ID="familyTreePath" pluralLabel="FamilyTreePaths" sType="STRING" defaultValue="/Users/svasa/repast2/BSubtilis/logs"/>
+  <attributes label="Death Rate" ID="deathRate" pluralLabel="Death Rates" sType="FLOAT" defaultValue="0.002"/>
+  <implementation package="bsubtilis" className="" basePath="../BSubtilis"/>
+  <agents xsi:type="score:SContext" label="ExtraCellEnviro" ID="extraCellEnviro" pluralLabel="ExtraCellEnviros">
+    <implementation className="ExtraCellEnviro"/>
+    <agents label="ComX" ID="comX" pluralLabel="ComXs">
+      <implementation className="ComX"/>
+      <styles xsi:type="score:SStyle3D" label="ComXStyle3D" ID="comXStyle3D">
+        <implementation className="AgentStyle3D"/>
+      </styles>
+    </agents>
+    <agents label="BistableSwitch" ID="bistableSwitch" pluralLabel="BistableSwitchs">
+      <implementation className="BistableSwitch"/>
+      <styles xsi:type="score:SStyle3D" label="BistableSwitchStyle3D" ID="bistableSwitchStyle3D">
+        <implementation className="AgentStyle3D"/>
+      </styles>
+      <styles xsi:type="score:SStyle2D" label="BistableSwitchStyle2D" ID="bistableSwitchStyle2D">
+        <implementation className="AgentStyle2D"/>
+      </styles>
+    </agents>
+    <projections xsi:type="score:SGrid" label="ExtraCellGrid" ID="extraCellGrid" pluralLabel="ExtraCellGrids"/>
+    <projections xsi:type="score:SNetwork" label="FamilyTree" ID="familyTree" pluralLabel="FamilyTrees"/>
+    <valueLayers label="Nutrients" ID="nutrients" pluralLabel="Nutrientss"/>
+    <valueLayers label="Peptide" ID="peptide" pluralLabel="Peptides"/>
+  </agents>
+</score:SContext>
